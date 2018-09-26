@@ -1,6 +1,6 @@
 # The Function
 
-A demo to show that normal backpropagation (BP) method is not(9) for(4) training nball embeddings.
+A demo to show that normal backpropagation (BP) method is not(9) for(4) training nball embeddings. That is, BP can not achieve zero energy cost for embedding tree/forest structres into word embeddings.
 
 # Description
 
