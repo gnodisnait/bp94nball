@@ -52,6 +52,9 @@ bp94nball $ source activate BP94NBALL
 ```
 (BP94NBALL) bp94nball $ make show
 ```
+A result is illustrated as below.
+
+![](https://github.com/gnodisnait/bp94nball/blob/master/pic/bp94nball.png)
 
 # Run python command line with  restart
 ```
