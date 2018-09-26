@@ -41,7 +41,7 @@ where ```x, l, r``` representing angle, length of the center vector, and the rad
 
 # Quick start
 ```
-$ git clone https://http://github.com/gnodisnait/bp94nball.git
+$ git clone hhttp://github.com/gnodisnait/bp94nball.git
 $ cd bp94nball
 bp94nball $ conda create --name BP94NBALL
 bp94nball $ source activate BP94NBALL
