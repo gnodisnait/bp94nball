@@ -28,7 +28,7 @@ material = [np.cos(np.pi / 4 + np.pi / 30), np.sin(np.pi / 4 + np.pi / 30), 10, 
 substance = [np.cos(np.pi / 4 + np.pi / 15), np.sin(np.pi / 4 + np.pi / 15), 10, 3]
 entity = [np.cos(np.pi / 4 - np.pi / 200), np.sin(np.pi / 4 - np.pi / 200), 10, 3]
 
-rock_2 = [np.cos(np.pi / 4), np.sin(np.pi / 4), 15, 3]
+rock_2 = [np.cos(np.pi / 4), np.sin(np.pi / 4), 10, 3]
 pop = [np.cos(np.pi / 4 + np.pi / 50), np.sin(np.pi / 4 + np.pi / 50), 10, 3]
 jazz = [np.cos(np.pi / 4 - np.pi / 50), np.sin(np.pi / 4 - np.pi / 50), 10, 3]
 music = [np.cos(np.pi / 3), np.sin(np.pi / 3), 10, 3]
