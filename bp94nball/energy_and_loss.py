@@ -14,19 +14,22 @@ from bp94nball.colors import cnames
 
 colorList = ['blue', 'green', 'red', 'cyan', 'magenta', 'yellow','black', 'seagreen', 'pink',
              'navy','violet', 'crimson'] + list(cnames.keys())
-rock_1 = [np.cos(np.pi / 4), np.sin(np.pi / 4), 10, 3]
-stone = [np.cos(np.pi / 4 + np.pi / 100), np.sin(np.pi / 4 + np.pi / 100), 10, 3]
-basalt = [np.cos(np.pi / 4 - np.pi / 100), np.sin(np.pi / 4 - np.pi / 100), 10, 3]
-material = [np.cos(np.pi / 4 + np.pi / 30), np.sin(np.pi / 4 + np.pi / 30), 10, 3]
-substance = [np.cos(np.pi / 4 + np.pi / 15), np.sin(np.pi / 4 + np.pi / 15), 10, 3]
-entity = [np.cos(np.pi / 4 - np.pi / 200), np.sin(np.pi / 4 - np.pi / 200), 10, 3]
+r0=0.05
 
-rock_2 = [np.cos(np.pi / 4), np.sin(np.pi / 4), 15, 3]
-pop = [np.cos(np.pi / 4 + np.pi / 50), np.sin(np.pi / 4 + np.pi / 50), 10, 3]
-jazz = [np.cos(np.pi / 4 - np.pi / 50), np.sin(np.pi / 4 - np.pi / 50), 10, 3]
-music = [np.cos(np.pi / 3), np.sin(np.pi / 3), 10, 3]
-communication = [np.cos(np.pi / 3 + np.pi / 50), np.sin(np.pi / 3 + np.pi / 50), 10, 3]
-event = [np.cos(np.pi / 3 - np.pi / 50), np.sin(np.pi / 3 - np.pi / 50), 10, 3]
+rock_1 = [np.cos(np.pi / 4), np.sin(np.pi / 4), 10,r0]
+stone = [np.cos(np.pi / 4 + np.pi / 100), np.sin(np.pi / 4 + np.pi / 100), 10, r0]
+basalt = [np.cos(np.pi / 4 - np.pi / 200), np.sin(np.pi / 4 - np.pi / 200), 10, r0]
+material = [np.cos(np.pi / 4 - np.pi / 100), np.sin(np.pi / 4 - np.pi / 100), 10, r0]
+substance = [np.cos(np.pi / 4 - np.pi / 50), np.sin(np.pi / 4 - np.pi / 50), 10, r0]
+entity = [np.cos(np.pi / 4- np.pi / 40), np.sin(np.pi / 4- np.pi / 40), 10, r0]
+
+rock_2 = [np.cos(np.pi / 4 + np.pi / 30), np.sin(np.pi / 4 + np.pi / 30), 10, r0]
+pop = [np.cos(np.pi / 4 + np.pi / 50), np.sin(np.pi / 4 + np.pi / 50), 10, r0]
+jazz = [np.cos(np.pi / 3 - np.pi / 50), np.sin(np.pi / 3 - np.pi / 50), 10, r0]
+music = [np.cos(np.pi / 4 + np.pi / 15), np.sin(np.pi / 4 + np.pi / 15), 10, r0]
+communication = [np.cos(np.pi / 3), np.sin(np.pi / 3), 10, r0]
+event = [np.cos(np.pi / 3 + np.pi / 50), np.sin(np.pi / 3 + np.pi / 50), 10, r0]
+
 
 wDic = {
         'rock_1': rock_1,
@@ -58,6 +61,7 @@ kw1=[
         ['music', 'communication', 'entity'],
         ['communication', 'event', 'entity'],
         ]
+
 
 def do_func(funcName="part_of"):
     fdic = {
@@ -472,7 +476,6 @@ def train_e2_2D_iDC_batch_animation(klst, wDic={}, func="part_of", negFunc="disc
                 j += 1
             lossLst.append(random.randint(1,10))
 
-
     a = anim.FuncAnimation(fig, one_round_update, frames=512, repeat=False)
     plt.show()
 
@@ -679,7 +682,7 @@ def save_balls_to_file(ballDic, outFile, d = 300):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--restart', type=bool, default=True)
+    parser.add_argument('--restart', type=bool, default=False)
     args = parser.parse_args()
     restartTF = args.restart
     training_balls(restart = restartTF)
